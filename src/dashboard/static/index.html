@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spyware Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Content will be loaded here by app.js -->
+    </div>
+    <script src="app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const appDiv = document.getElementById('app');
+            const dashboards = [
+                "MITM Stingray",
+                "Device Fingerprinting",
+                "Advanced Social Engineering",
+                "Zero-Day Exploits",
+                "Advanced Malware Analysis",
+                "Network Exploitation",
+                "Wireless Exploitation",
+                "Cloud Exploitation",
+                "IoT Exploitation",
+                "APTs",
+                "Real-Time Threat Intelligence",
+                "Predictive Analytics",
+                "Automated Incident Response",
+                "AI Red Teaming",
+                "Blockchain Logger",
+                "Alerts and Notifications",
+                "Data Exfiltration",
+                "Data Visualization",
+                "Exploit Payloads",
+                "Fuzzing Engine",
+                "Vulnerability Scanner",
+                "Zero-Day Exploits",
+                "C2 Dashboard",
+                "Alerts Notifications",
+                "Automated Incident Response",
+                "Adware Manager",
+                "AI Integration",
+                "Deployment Manager",
+                "Advanced Decryption",
+                "Advanced Malware Analysis",
+                "Advanced Social Engineering",
+                "AI Red Teaming",
+                "Android Exploit",
+                "APT Simulation",
+                "Automated Incident Response",
+                "Blockchain Logger",
+                "Botnet Manager",
+                "Data Exfiltration",
+                "Data Visualization",
+                "DeepSeek Cody Integration",
+                "Device Fingerprinting",
+                "DNS Manager",
+                "Download Manager",
+                "Exploit Payloads",
+                "Fuzzing Engine",
+                "Identity Manager",
+                "iOS Exploit",
+                "IoT Exploitation",
+                "Linux Exploit",
+                "Machine Learning AI",
+                "MacOS Exploit",
+                "MITM Stingray",
+                "Network Exploitation",
+                "Predictive Analytics",
+                "Proxy Chain Manager",
+                "Real-Time Monitoring",
+                "Real-Time Threat Intelligence",
+                "Self-Healing AI Manager",
+                "Session Management",
+                "Settings Manager",
+                "Threat Intelligence",
+                "Troubleshooting Manager",
+                "VSCode Dashboard Manager",
+                "Vulnerability Scanner",
+                "Windows Exploit",
+                "Wireless Exploitation",
+                "Zero-Day Exploits"
+            ];
+
+            const createDashboardLinks = () => {
+                let html = '<h2>Dashboards</h2><ul>';
+                dashboards.forEach(dashboard => {
+                    html += `<li><a href="#" onclick="loadDashboard('${dashboard}')">${dashboard}</a></li>`;
+                });
+                html += '</ul>';
+                appDiv.innerHTML = html;
+            };
+
+            window.loadDashboard = (dashboardName) => {
+                appDiv.innerHTML = `<h2>${dashboardName} Dashboard</h2><p>Loading...</p>`;
+                // Placeholder for loading the actual dashboard content
+            };
+
+            createDashboardLinks();
+        });
+    </script>
+    <button id="shareButton">Share</button>
+    <button id="downloadButton">Download</button>
+    <button id="continueButton">Continue</button>
+    <script>
+        document.getElementById('shareButton').addEventListener('click', () => {
+            const format = prompt("Enter preferred format (PDF/Text):");
+            if (format) {
+                alert(`Sharing conversation as ${format}`);
+                // Implement sharing functionality here
+            }
+        });
+
+        document.getElementById('downloadButton').addEventListener('click', () => {
+            alert("Downloading zip file of the project");
+            // Implement download functionality here
+        });
+
+        document.getElementById('continueButton').addEventListener('click', () => {
+            alert("Continuing AI chatbot response");
+            // Implement continue functionality here
+        });
+    </script>
+</body>
+</html>
